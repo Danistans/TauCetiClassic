@@ -212,6 +212,91 @@
 	item_state = "silver_id"
 	item_state_world = "silver_world"
 
+/obj/item/weapon/card/id/key
+	name = "door key"
+	desc = "Ключ от какой-то там двери"
+	icon_state = "silver" // нужен спрайт ключа
+	item_state = "silver_id" // нужен спрайт ключа
+	item_state_world = "silver_world" // нужен спрайт ключа
+	mining_points = 0 //For redeeming at mining equipment lockers
+	access = list()
+	registered_name = "Unknown" // The name registered_name on the card
+	blood_type = 0
+	dna_hash = 0
+	fingerprint_hash = 0
+
+/obj/item/weapon/card/id/key/captain
+	name = "master key"
+	desc = "Мастер-ключ от всех помещений поезда."
+	icon_state = "silver" // нужен спрайт ключа
+	item_state = "silver_id" // нужен спрайт ключа
+	item_state_world = "silver_world" // нужен спрайт ключа
+	access = list(access_security, access_sec_doors, access_brig, access_armory, access_forensics_lockers, access_blueshield,
+	            access_medical, access_genetics, access_morgue, access_rd, access_cargoshop,
+	            access_tox, access_tox_storage, access_chemistry, access_engine, access_engine_equip, access_maint_tunnels,
+	            access_external_airlocks, access_change_ids, access_ai_upload,
+	            access_teleporter, access_eva, access_heads, access_captain, access_all_personal_lockers,
+	            access_tech_storage, access_chapel_office, access_atmospherics, access_kitchen,
+	            access_bar, access_janitor, access_crematorium, access_robotics, access_cargo, access_construction,
+	            access_hydroponics, access_library, access_virology, access_psychiatrist, access_cmo, access_qm, access_lawyer, access_surgery,
+	            access_theatre, access_research, access_mining, access_mailsorting,
+	            access_heads_vault, access_mining_station, access_xenobiology, access_ce, access_hop, access_hos, access_RC_announce,
+	            access_keycard_auth, access_tcomsat, access_gateway, access_xenoarch, access_minisat, access_recycler, access_detective, access_barber, access_paramedic, access_medbay_storage, access_engineering_lobby)
+
+/obj/item/weapon/card/id/key/officer
+	name = "officer key"
+	desc = "Ключ офицера. Этим открывают многие двери."
+	icon_state = "silver" // нужен спрайт ключа
+	item_state = "silver_id" // нужен спрайт ключа
+	item_state_world = "silver_world" // нужен спрайт ключа
+	access = list(access_security, access_hos, access_heads, access_heads_vault, access_sec_doors, access_brig, access_armory, access_forensics_lockers, access_blueshield, access_maint_tunnels, access_morgue, access_eva, access_construction, access_detective)
+
+/obj/item/weapon/card/id/key/soldier
+	name = "soldier key"
+	desc = "Ключ солдата. Этим открывают немногие двери."
+	icon_state = "silver" // нужен спрайт ключа
+	item_state = "silver_id" // нужен спрайт ключа
+	item_state_world = "silver_world" // нужен спрайт ключа
+	access = list(access_security, access_brig, access_forensics_lockers, access_morgue, access_eva, access_construction, access_maint_tunnels, access_detective)
+
+/obj/item/weapon/card/id/key/common
+	name = "common key"
+	desc = "Ключ как ключ, чего бухтеть-то. На поезде используется гражданскими и сёстрами."
+	icon_state = "silver" // нужен спрайт ключа
+	item_state = "silver_id" // нужен спрайт ключа
+	item_state_world = "silver_world" // нужен спрайт ключа
+	access = list(access_medical, access_genetics, access_morgue, access_chemistry, access_engine, access_engine_equip, access_maint_tunnels, access_external_airlocks, access_tech_storage, access_chapel_office, access_atmospherics, access_kitchen, access_bar, access_janitor, access_crematorium, access_cargo, access_construction, access_hydroponics, access_library, access_psychiatrist, access_lawyer, access_surgery, access_theatre, access_mining, access_mailsorting, access_mining_station, access_tcomsat, access_recycler, access_detective, access_barber, access_paramedic, access_medbay_storage, access_engineering_lobby)
+
+/obj/item/weapon/card/id/key/leila
+	name = "strange key"
+	desc = "Кажется, этот ключ не подходит ни к одной из дверей. Основание ключа, кажется, можно провернуть."
+	icon_state = "silver" // нужен спрайт ключа
+	item_state = "silver_id" // нужен спрайт ключа
+	item_state_world = "silver_world" // нужен спрайт ключа
+	mining_points = 100000
+	access = 0
+	registered_name = "Leila Komarova"
+
+/obj/item/weapon/card/id/key/leila/attack_self(mob/user)
+	if (!user)
+		return 0
+	else
+		playsound(user, 'sound/items/AirHorn.ogg', VOL_EFFECTS_MASTER)
+	for(var/mob/living/carbon/M in ohearers(12, user))
+		if(ishuman(M))
+			var/mob/living/carbon/human/H = M
+			if(istype(H.l_ear, /obj/item/clothing/ears/earmuffs) || istype(H.r_ear, /obj/item/clothing/ears/earmuffs))
+				continue
+		to_chat(M, "<font color='red' size='7'>[user] наказан всесильным духом Комаровых!</font>")
+		M.SetSleeping(0)
+		M.AdjustStuttering(20)
+		M.ear_deaf += 30
+		M.Weaken(3)
+		if(prob(30))
+			M.Stun(10)
+			M.Paralyse(4)
+	qdel(src)
+
 /obj/item/weapon/card/id/gold
 	name = "identification card"
 	desc = "Золотая ID карта, которая показывает силу и могущество владельца."
