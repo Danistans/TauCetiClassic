@@ -76,6 +76,13 @@
 	time = 20 // 15 faster than crafting them by hand!
 	required_proficiency = list(/datum/skill/construction = SKILL_LEVEL_TRAINED)
 
+/datum/crafting_recipe/key_holder
+	name = "Key holder"
+	result = /obj/item/weapon/storage/key_holder
+	reqs = list(/obj/item/stack/cable_coil = 1)
+	time = 10
+	required_proficiency = list(/datum/skill/construction = SKILL_LEVEL_TRAINED)
+
 /datum/crafting_recipe/toysword
 	name = "Toy Sword"
 	reqs = list(/obj/item/weapon/light/bulb = 1,
