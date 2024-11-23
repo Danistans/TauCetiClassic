@@ -24,6 +24,7 @@
 		/obj/item/weapon/photo,
 		/obj/item/weapon/reagent_containers/dropper,
 		/obj/item/weapon/screwdriver,
+		/obj/item/weapon/storage/key_holder,
 		/obj/item/weapon/stamp)
 	slot_flags = SLOT_FLAGS_ID
 
