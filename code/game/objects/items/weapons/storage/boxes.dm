@@ -46,6 +46,7 @@
 	item_state = "syringe_kit"
 	max_storage_space = 5
 	can_hold = list(/obj/item/weapon/card/id/key)
+	w_class = SIZE_MINUSCULE
 	foldable = /obj/item/stack/cable_coil
 	var/list/access = list()
 
