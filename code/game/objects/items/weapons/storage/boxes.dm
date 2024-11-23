@@ -39,6 +39,37 @@
 	max_storage_space = DEFAULT_BOX_STORAGE
 	foldable = /obj/item/stack/sheet/cardboard	//BubbleWrap
 
+/obj/item/weapon/storage/key_holder
+	name = "key holder"
+	desc = "Незамысловатый брелок, на который цепляются ключи."
+	icon_state = "box" //Нужен спрайт кейхолдера
+	item_state = "syringe_kit"
+	max_storage_space = 5
+	can_hold = list(/obj/item/weapon/card/id/key)
+	foldable = /obj/item/stack/cable_coil
+	var/list/access = list()
+
+/obj/item/weapon/storage/key_holder/GetAccess()
+	return access
+
+/obj/item/weapon/storage/key_holder/handle_item_insertion(obj/item/W, prevent_warning = FALSE, NoUpdate = FALSE)
+	. = ..(W, prevent_warning)
+	if(.)
+		if(istype(W, /obj/item/weapon/card/id/key))
+			var/obj/item/weapon/card/id/key/key = W
+			for(var/el in key.access)
+				if(!access.Find(el))
+					access += el
+
+/obj/item/weapon/storage/key_holder/remove_from_storage(obj/item/W, atom/new_location, NoUpdate = FALSE)
+	. = ..(W, new_location)
+	if(.)
+		if(istype(W, /obj/item/weapon/card/id/key))
+			var/obj/item/weapon/card/id/key/key = W
+			for(var/el in key.access)
+				if(access.Find(el))
+					access -= el
+
 //Survival boxes, given by NanoTrasen
 /obj/item/weapon/storage/box/survival
 	name = "emergency box"
