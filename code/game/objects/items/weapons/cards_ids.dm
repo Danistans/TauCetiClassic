@@ -158,7 +158,7 @@
 	fingerprint_hash = md5(H.dna.uni_identity)
 
 /obj/item/weapon/card/id/attack_self(mob/user)
-	visible_message("[user] shows you: [bicon(src)] [src.name]: assignment: [src.assignment]")
+	visible_message("[user] Вертит ключ на пальце. Весело ли ему?")
 	add_fingerprint(user)
 	return
 

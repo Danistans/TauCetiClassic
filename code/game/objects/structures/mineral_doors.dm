@@ -12,6 +12,13 @@
 	var/isSwitchingStates = FALSE
 	var/sheetAmount = 7
 	var/can_unwrench = TRUE
+	var/locked = FALSE
+	var/list/access = list()
+	var/accesses_desc = ""
+	var/islocked = 0
+	var/granted = FALSE //костыль, чтобы проверять, есть ли доступы на двери
+	var/match_access = FALSE // костыль для проверки совместимости доступа ключа-двери
+	var/current_user = 0
 
 	var/sheetType
 
@@ -27,14 +34,19 @@
 	return ..()
 
 /obj/structure/mineral_door/Bumped(atom/M)
-	if(close_state)
-		if(ismob(M))
-			if(DoorChecks() && MobChecks(M))
-				add_fingerprint(M)
-				Open()
-		else if(istype(M, /obj/mecha))
-			if(DoorChecks() && MechChecks(M))
-				Open()
+	if(islocked == 1)
+		to_chat(current_user, "<span class='notice'>Дверь не поддаётся. Закрыто на ключ.</span>")
+		current_user = 0
+		return
+	if(islocked == 0)
+		if(close_state)
+			if(ismob(M))
+				if(DoorChecks() && MobChecks(M))
+					add_fingerprint(M)
+					Open()
+			else if(istype(M, /obj/mecha))
+				if(DoorChecks() && MechChecks(M))
+					Open()
 
 /obj/structure/mineral_door/attack_ai(mob/user)
 	if(isrobot(user) && get_dist(user, src) <= 1)
@@ -44,9 +56,13 @@
 	return attack_hand(user)
 
 /obj/structure/mineral_door/attack_hand(mob/user)
-	if(DoorChecks() && MobChecks(user))
-		add_fingerprint(user)
-		SwitchState()
+	if(islocked == 1)
+		to_chat(user, "<span class='notice'>Дверь не поддаётся. Закрыто на ключ.</span>")
+		return
+	if(islocked == 0)
+		if(DoorChecks() && MobChecks(user))
+			add_fingerprint(user)
+			SwitchState()
 
 /obj/structure/mineral_door/c_airblock(turf/other)
 	return ..() | ZONE_BLOCKED
@@ -120,6 +136,23 @@
 				continue
 			AA.theImage.icon_state = "[initial(AA.alternate_obj.icon_state)][icon_state_postfix]"
 
+/obj/structure/mineral_door/GetAccess()
+	return access
+
+/obj/structure/mineral_door/proc/IfLocked()
+	islocked = 0
+	to_chat(current_user, "<span class='notice'>Дверь больше не заперта.</span>")
+	match_access = FALSE
+	current_user = 0
+	return
+
+/obj/structure/mineral_door/proc/IfUnlocked()
+	islocked = 1
+	to_chat(current_user, "<span class='notice'>Дверь заперта на ключ.</span>")
+	match_access = FALSE
+	current_user = 0
+	return
+
 /obj/structure/mineral_door/attackby(obj/item/weapon/W, mob/user)
 	if(istype(W, /obj/item/weapon/pickaxe) && !(istype(src, /obj/structure/mineral_door/wood) || istype(src, /obj/structure/mineral_door/metal)))
 		if(user.is_busy(src))
@@ -128,9 +161,41 @@
 		if(W.use_tool(src, user, 50, volume = 100))
 			to_chat(user, "<span class='notice'>You finished digging!</span>")
 			deconstruct(TRUE)
+	if(istype(W, /obj/item/weapon/card/id/key) && !granted)
+		var/obj/item/weapon/card/id/key/key = W
+		for(var/el in key.access)
+			if(!access.Find(el))
+				access += el
+				accesses_desc += get_access_desc(el) + ", "
+		to_chat(user, "<span class='notice'>Доступы установлены: [accesses_desc].</span>")
+		granted = TRUE
+		return
+
+	if(istype(W, /obj/item/weapon/storage/key_holder) && !granted)
+		var/obj/item/weapon/storage/key_holder/key_holder = W
+		for(var/el in key_holder.access)
+			if(!access.Find(el))
+				access += el
+				accesses_desc += get_access_desc(el) + ", "
+		to_chat(user, "<span class='notice'>Доступы установлены: [accesses_desc].</span>")
+		granted = TRUE
+		return
+
+	if(istype(W, /obj/item/weapon/card/id/key) && granted)
+		var/obj/item/weapon/card/id/key/key = W
+		var/obj/structure/mineral_door/mineral_door = src
+		for(var/ac in key.access)
+			if(ac in mineral_door.access)
+				match_access = TRUE
+		if(match_access)
+			current_user = user
+			islocked ? IfLocked() : IfUnlocked()
 
 	else if(iswrenching(W) && can_unwrench)
 		if(user.is_busy(src))
+			return
+		if(granted)
+			to_chat(user, "<span class='notice'>Замочники нынче дорого берут! Я не буду разбирать эту дверь! //Danistans: Мне пиздец как лень это доделать. </span>")
 			return
 		if(anchored)
 			to_chat(user, "<span class='notice'>You start dissassembling the [name].</span>")
