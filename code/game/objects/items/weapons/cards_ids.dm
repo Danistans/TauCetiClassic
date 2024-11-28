@@ -214,7 +214,7 @@
 
 /obj/item/weapon/card/id/key
 	name = "door key"
-	desc = "Ключ от какой-то там двери"
+	desc = "Ключ от какой-то там двери."
 	icon_state = "key_captain"
 	item_state = "key_captain"
 	item_state_world = "key_captain"
