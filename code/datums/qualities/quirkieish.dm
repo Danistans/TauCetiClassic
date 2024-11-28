@@ -384,7 +384,7 @@
 	var/obj/item/weapon/card/id/ID = H.wear_id
 	ID.assignment = "Prisoner"
 	ID.rank = ID.assignment
-	ID.name = "[ID.registered_name]'s ID Card ([ID.assignment] #[number])"
+	ID.name = "[ID.registered_name]'s key ([ID.assignment] #[number])"
 
 	var/obj/item/device/pda/PDA = H.belt
 	PDA.ownjob = ID.assignment

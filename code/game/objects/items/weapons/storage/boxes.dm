@@ -42,13 +42,23 @@
 /obj/item/weapon/storage/key_holder
 	name = "key holder"
 	desc = "Незамысловатый брелок, на который цепляются ключи."
-	icon_state = "box" //Нужен спрайт кейхолдера
-	item_state = "syringe_kit"
-	max_storage_space = 5
+	icon_state = "keyholder"
+	item_state = "keyholder"
+	max_storage_space = 4
 	can_hold = list(/obj/item/weapon/card/id/key)
 	w_class = SIZE_MINUSCULE
 	foldable = /obj/item/stack/cable_coil
 	var/list/access = list()
+
+/obj/item/weapon/storage/key_holder/update_icon()
+	. = ..()
+	for(var/i in 1 to contents.len)
+/*		var/obj/item/weapon/storage/key_holder/key_holder = contents[i]
+		var/icon/new_key_holder_icon = icon('icons/obj/storage.dmi', "donut_[donut.donut_sprite_type]")
+		new_donut_icon.Shift(EAST, 3 * (i - 1))
+		add_overlay(new_donut_icon)
+*/
+		icon_state = initial(icon_state) + "_[i]"
 
 /obj/item/weapon/storage/key_holder/GetAccess()
 	return access

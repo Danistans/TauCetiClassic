@@ -98,6 +98,70 @@
 		l_ear = /obj/item/device/radio/headset/headset_sec/nt_pmc
 		ADD_TRAIT(H, TRAIT_NO_CLONE, ROUNDSTART_TRAIT)
 
+/datum/outfit/job/officer/security
+	name = OUTFIT_JOB_NAME("Офицер охранки")
+
+	uniform = /obj/item/clothing/under/rank/security
+	uniform_f = /obj/item/clothing/under/rank/security/skirt
+	belt = /obj/item/device/pda/security
+	shoes = /obj/item/clothing/shoes/boots
+	l_ear = /obj/item/device/radio/headset/headset_sec
+
+	l_hand_back = /obj/item/weapon/handcuffs
+	l_pocket = /obj/item/device/flash
+
+	implants = list(/obj/item/weapon/implant/mind_protect/mindshield, /obj/item/weapon/implant/obedience)
+
+	back_style = BACKPACK_STYLE_SECURITY
+
+/datum/outfit/job/officer/feldfeb
+	name = OUTFIT_JOB_NAME("Фельдфебель")
+
+	uniform = /obj/item/clothing/under/rank/security
+	uniform_f = /obj/item/clothing/under/rank/security/skirt
+	belt = /obj/item/device/pda/security
+	shoes = /obj/item/clothing/shoes/boots
+	l_ear = /obj/item/device/radio/headset/headset_sec
+
+	l_hand_back = /obj/item/weapon/handcuffs
+	l_pocket = /obj/item/device/flash
+
+	implants = list(/obj/item/weapon/implant/mind_protect/mindshield, /obj/item/weapon/implant/obedience)
+
+	back_style = BACKPACK_STYLE_SECURITY
+
+/datum/outfit/job/officer/unter
+	name = OUTFIT_JOB_NAME("Унтер-офицер")
+
+	uniform = /obj/item/clothing/under/rank/security
+	uniform_f = /obj/item/clothing/under/rank/security/skirt
+	belt = /obj/item/device/pda/security
+	shoes = /obj/item/clothing/shoes/boots
+	l_ear = /obj/item/device/radio/headset/headset_sec
+
+	l_hand_back = /obj/item/weapon/handcuffs
+	l_pocket = /obj/item/device/flash
+
+	implants = list(/obj/item/weapon/implant/mind_protect/mindshield, /obj/item/weapon/implant/obedience)
+
+	back_style = BACKPACK_STYLE_SECURITY
+
+/datum/outfit/job/officer/rjevsky
+	name = OUTFIT_JOB_NAME("Поручик")
+
+	uniform = /obj/item/clothing/under/rank/security
+	uniform_f = /obj/item/clothing/under/rank/security/skirt
+	belt = /obj/item/device/pda/security
+	shoes = /obj/item/clothing/shoes/boots
+	l_ear = /obj/item/device/radio/headset/headset_sec
+
+	l_hand_back = /obj/item/weapon/handcuffs
+	l_pocket = /obj/item/device/flash
+
+	implants = list(/obj/item/weapon/implant/mind_protect/mindshield, /obj/item/weapon/implant/obedience)
+
+	back_style = BACKPACK_STYLE_SECURITY
+
 // FORENSIC OUTFIT
 /datum/outfit/job/forensic
 	name = OUTFIT_JOB_NAME("Forensic Technician")

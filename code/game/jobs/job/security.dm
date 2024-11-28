@@ -1,13 +1,13 @@
 /datum/job/hos
-	title = "Head of Security"
+	title = "Colonel"
 	flag = HOS
 	department_flag = ENGSEC
 	faction = "Station"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	supervisors = "the captain"
 	selection_color = "#ffdddd"
-	idtype = /obj/item/weapon/card/id/secGold
+	idtype = /obj/item/weapon/card/id/key/captain
 	req_admin_notify = 1
 	is_head = TRUE
 	access = list(
@@ -31,7 +31,7 @@
 	flags = JOB_FLAG_SECURITY|JOB_FLAG_COMMAND|JOB_FLAG_HEAD_OF_STAFF|JOB_FLAG_BLUESHIELD_PROTEC
 
 /datum/job/warden
-	title = "Warden"
+	title = "Lieutenant"
 	flag = WARDEN
 	department_flag = ENGSEC
 	faction = "Station"
@@ -40,7 +40,7 @@
 	supervisors = "the head of security"
 	selection_color = "#ffeeee"
 	idtype = /obj/item/weapon/card/id/sec
-	access = list(access_security, access_sec_doors, access_brig, access_armory, access_maint_tunnels)
+	access = list(access_security, access_sec_doors, access_brig, access_armory, access_maint_tunnels, access_hos)
 	salary = 190
 	minimal_player_age = 5
 	minimal_player_ingame_minutes = 1800
@@ -60,16 +60,16 @@
 		to_chat(H, "<span class='notice'>Вместо обычной охраны на эту станцию решили прислать профессиональных оперативников. Вы являетесь одним из них. В отличии от стандартного офицера охраны, вы обладаете продвинутым снаряжением, отличной подготовкой, имплантом лояльности и встроенным устройством для уничтожения тела после смерти.</span>")
 
 /datum/job/detective
-	title = "Detective"
+	title = "Unter-officer"
 	flag = DETECTIVE
 	department_flag = ENGSEC
 	faction = "Station"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 3
+	spawn_positions = 3
 	supervisors = "the head of security"
 	selection_color = "#ffeeee"
 	idtype = /obj/item/weapon/card/id/sec
-	access = list(access_security, access_sec_doors, access_detective, access_maint_tunnels)
+	access = list(access_security, access_sec_doors, access_detective, access_maint_tunnels, access_hos)
 	salary = 180
 	minimal_player_age = 3
 	minimal_player_ingame_minutes = 1560
@@ -89,12 +89,12 @@
 	flag = OFFICER
 	department_flag = ENGSEC
 	faction = "Station"
-	total_positions = 5
-	spawn_positions = 5
+	total_positions = 4
+	spawn_positions = 4
 	supervisors = "the head of security and warden"
 	selection_color = "#ffeeee"
 	idtype = /obj/item/weapon/card/id/sec
-	access = list(access_security, access_sec_doors, access_brig, access_maint_tunnels)
+	access = list(access_security, access_sec_doors, access_brig, access_maint_tunnels, access_hos)
 	salary = 130
 	minimal_player_age = 3
 	minimal_player_ingame_minutes = 1560
@@ -115,16 +115,16 @@
 		LAZYADD(skillsets, /datum/skillset/warden)
 
 /datum/job/forensic
-	title = "Forensic Technician"
+	title = "Sergeant major"
 	flag = FORENSIC
 	department_flag = ENGSEC
 	faction = "Station"
-	total_positions = 1
-	spawn_positions = 1
+	total_positions = 2
+	spawn_positions = 2
 	supervisors = "the head of security"
 	selection_color = "#ffeeee"
 	idtype = /obj/item/weapon/card/id/sec
-	access = list(access_sec_doors, access_forensics_lockers, access_morgue, access_maint_tunnels)
+	access = list(access_sec_doors, access_forensics_lockers, access_morgue, access_maint_tunnels, access_hos)
 	salary = 150
 	minimal_player_age = 3
 	minimal_player_ingame_minutes = 1560
@@ -140,12 +140,12 @@
 	flags = JOB_FLAG_SECURITY
 
 /datum/job/cadet
-	title = "Security Cadet"
+	title = "Corporal"
 	flag = CADET
 	department_flag = ENGSEC
 	faction = "Station"
-	total_positions = 3
-	spawn_positions = 3
+	total_positions = 6
+	spawn_positions = 6
 	supervisors = "the head of security"
 	selection_color = "#ffeeee"
 	idtype = /obj/item/weapon/card/id/sec
