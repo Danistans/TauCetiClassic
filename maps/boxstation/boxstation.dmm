@@ -1312,6 +1312,15 @@
 	icon_state = "wood4"
 	},
 /area/shuttle/syndicate/start)
+"gaZ" = (
+/obj/structure/mineral_door/wood{
+	access = list(access_sec_doors);
+	granted = 1
+	},
+/turf/simulated/floor/wood{
+	icon_state = "wood9"
+	},
+/area/shuttle/syndicate/start)
 "ggf" = (
 /obj/structure/closet/medical_wall,
 /turf/simulated/wall,
@@ -1917,6 +1926,13 @@
 	icon_state = "wood10"
 	},
 /area/shuttle/syndicate/start)
+"jYK" = (
+/obj/structure/mineral_door/wood{
+	access = list(access_hos);
+	granted = 1
+	},
+/turf/simulated/floor/wood,
+/area/shuttle/syndicate/start)
 "kaR" = (
 /obj/structure/lattice,
 /obj/structure/window/thin/reinforced{
@@ -2423,6 +2439,13 @@
 	icon_state = "wood5"
 	},
 /area/shuttle/syndicate/start)
+"nDu" = (
+/obj/structure/mineral_door/wood{
+	access = list(access_sec_doors);
+	granted = 1
+	},
+/turf/simulated/floor/wood,
+/area/shuttle/syndicate/start)
 "nLe" = (
 /obj/structure/sink{
 	dir = 4;
@@ -2885,6 +2908,15 @@
 	icon_state = "wood5"
 	},
 /area/shuttle/syndicate/start)
+"rog" = (
+/obj/structure/mineral_door/wood{
+	access = list(access_medical);
+	granted = 1
+	},
+/turf/simulated/floor/wood{
+	icon_state = "wood17"
+	},
+/area/shuttle/syndicate/start)
 "rrl" = (
 /obj/item/noticeboard_frame/wood,
 /turf/simulated/wall,
@@ -3301,6 +3333,15 @@
 /obj/structure/flora/junglebush/b,
 /turf/simulated/floor/grass,
 /area/space)
+"tlm" = (
+/obj/structure/mineral_door/wood{
+	access = list(access_medical);
+	granted = 1
+	},
+/turf/simulated/floor/wood{
+	icon_state = "wood5"
+	},
+/area/shuttle/syndicate/start)
 "toK" = (
 /obj/structure/flora/tree/jungle/small{
 	icon_state = "tree2"
@@ -3448,6 +3489,15 @@
 /obj/effect/light_emitter,
 /turf/simulated/floor/smoothtile/dark,
 /area/space)
+"tXL" = (
+/obj/structure/mineral_door/wood{
+	access = list(access_hos);
+	granted = 1
+	},
+/turf/simulated/floor/wood{
+	icon_state = "wood17"
+	},
+/area/shuttle/syndicate/start)
 "tZn" = (
 /obj/structure/bedsheetbin,
 /obj/structure/rack,
@@ -4112,6 +4162,15 @@
 	},
 /turf/simulated/floor/wood{
 	icon_state = "wood5"
+	},
+/area/shuttle/syndicate/start)
+"xjw" = (
+/obj/structure/mineral_door/wood{
+	access = list(access_sec_doors);
+	granted = 1
+	},
+/turf/simulated/floor/wood{
+	icon_state = "wood4"
 	},
 /area/shuttle/syndicate/start)
 "xmb" = (
@@ -11675,8 +11734,8 @@ bxl
 bxl
 bxl
 aak
-aat
-aat
+tlm
+tlm
 aak
 bxl
 bxl
@@ -12445,10 +12504,10 @@ aCN
 bxl
 pqu
 pqu
+tlm
 aat
 aat
-aat
-ceq
+rog
 ceq
 cCM
 bxl
@@ -13473,10 +13532,10 @@ jOT
 bQb
 xqM
 aat
+tlm
 aat
 aat
-aat
-aat
+tlm
 aat
 gZd
 bQb
@@ -15015,10 +15074,10 @@ tDW
 bQb
 iJL
 aat
+tlm
 aat
 aat
-aat
-aat
+tlm
 pYT
 gZd
 bQb
@@ -16557,10 +16616,10 @@ tDW
 bQb
 gZd
 aat
-aat
+tlm
 aat
 wvC
-aat
+tlm
 pYT
 hAB
 bQb
@@ -18099,10 +18158,10 @@ idu
 bQb
 aaG
 aat
+tlm
 aat
 aat
-aat
-aat
+tlm
 aat
 aaG
 bQb
@@ -19127,7 +19186,7 @@ eaS
 aDL
 nNO
 ceq
-ceq
+rog
 aat
 euI
 xOY
@@ -20415,7 +20474,7 @@ ceq
 bxl
 osi
 aat
-aat
+tlm
 aat
 aat
 bxl
@@ -20927,8 +20986,8 @@ bxl
 kdD
 wYq
 bxl
-aat
-aat
+tlm
+tlm
 bxl
 nwF
 aEy
@@ -22469,8 +22528,8 @@ bxl
 mgU
 aDr
 bxl
-teb
-teb
+jYK
+jYK
 bxl
 psP
 mgU
@@ -22982,10 +23041,10 @@ aCN
 bQb
 apu
 pqu
-ceq
+tXL
 wEN
 teb
-ceq
+tXL
 ceq
 apu
 bQb
@@ -26066,10 +26125,10 @@ aCN
 bQb
 nrz
 wEN
+jYK
 teb
 teb
-teb
-teb
+jYK
 teb
 uia
 bQb
@@ -27608,10 +27667,10 @@ idu
 bQb
 uia
 teb
-teb
+jYK
 teb
 anv
-teb
+jYK
 teb
 uia
 bQb
@@ -28893,7 +28952,7 @@ idu
 bQb
 ufV
 ape
-teb
+jYK
 teb
 aEO
 aFT
@@ -29407,7 +29466,7 @@ idu
 bVC
 hRO
 teb
-teb
+jYK
 teb
 teb
 teb
@@ -30179,7 +30238,7 @@ wtu
 wmw
 ahf
 bxl
-teb
+jYK
 bxl
 bxl
 aaJ
@@ -31721,8 +31780,8 @@ bxl
 cdW
 ctX
 lvx
-cfH
-cfH
+xjw
+xjw
 lvx
 cdW
 aaF
@@ -37632,8 +37691,8 @@ bxl
 bxl
 bxl
 aEO
-cfH
-cfH
+xjw
+xjw
 bxl
 bxl
 bxl
@@ -39431,8 +39490,8 @@ bxl
 wRD
 hNm
 bxl
-cfH
-cfH
+xjw
+xjw
 bxl
 aad
 abb
@@ -40973,8 +41032,8 @@ bxl
 cdW
 aaF
 lvx
-cfH
-cfH
+xjw
+xjw
 lvx
 cdW
 aaF
@@ -46884,8 +46943,8 @@ bxl
 bxl
 bxl
 tAu
-cfH
-cfH
+xjw
+xjw
 bxl
 bxl
 bxl
@@ -48683,8 +48742,8 @@ bxl
 wRD
 hNm
 bxl
-cfH
-cfH
+xjw
+xjw
 bxl
 aad
 abb
@@ -50225,8 +50284,8 @@ bxl
 wcm
 fBp
 bxl
-teb
-teb
+nDu
+nDu
 bxl
 jPx
 ttV
@@ -51509,10 +51568,10 @@ jOT
 wtu
 sBy
 beR
-fBp
+gaZ
 teb
 teb
-fBp
+gaZ
 enI
 rEg
 wtu
@@ -53051,10 +53110,10 @@ idu
 pbL
 xwI
 ldz
+nDu
 teb
 teb
-teb
-teb
+nDu
 jvZ
 nVM
 pbL
@@ -54853,7 +54912,7 @@ anv
 qbV
 teb
 anv
-teb
+nDu
 wEN
 teb
 bxl
@@ -57935,8 +57994,8 @@ bxl
 aaq
 aaq
 bxl
-teb
-teb
+nDu
+nDu
 bxl
 ppR
 wUJ
