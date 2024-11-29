@@ -6,8 +6,7 @@
 	uniform_f = /obj/item/clothing/under/shorts/red
 	shoes = /obj/item/clothing/shoes/boots // Говнодавы
 	head = /obj/item/clothing/head/helmet/warden
-
-	suit_store = /obj/item/weapon/gun/energy/gun
+	
 	belt = /obj/item/weapon/katana // Шашка
 	l_pocket = /obj/item/weapon/storage/key_holder
 	survival_box = FALSE

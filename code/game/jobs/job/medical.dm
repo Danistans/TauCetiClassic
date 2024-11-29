@@ -7,7 +7,7 @@
 	spawn_positions = 1
 	supervisors = "the captain"
 	selection_color = "#ffddf0"
-	idtype = /obj/item/weapon/card/id/medGold
+	idtype = /obj/item/weapon/card/id/key/common
 	req_admin_notify = 1
 	is_head = TRUE
 	access = list(
@@ -41,7 +41,7 @@
 	spawn_positions = 10
 	supervisors = "the chief medical officer"
 	selection_color = "#ffeef0"
-	idtype = /obj/item/weapon/card/id/med
+	idtype = /obj/item/weapon/card/id/key/common
 	access = list(access_medical, access_morgue, access_surgery, access_maint_tunnels, access_medbay_storage)
 	salary = 160
 	minimal_player_ingame_minutes = 960
