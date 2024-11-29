@@ -1,6 +1,6 @@
 /obj/item/weapon/melee/chainofcommand
 	name = "Nagaika"
-	desc = "Для особо буйных солдатов и для необычных удовольствий."
+	desc = "Для особо буйных солдат и для необычных удовольствий."
 	icon_state = "chain"
 	item_state = "chain"
 	flags = CONDUCT
