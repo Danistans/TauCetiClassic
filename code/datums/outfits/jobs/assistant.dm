@@ -2,8 +2,17 @@
 /datum/outfit/job/assistant
 	name = OUTFIT_JOB_NAME("Assistant Gear")
 
-	uniform = /obj/item/clothing/under/color/grey
-	shoes = /obj/item/clothing/shoes/black
+	uniform = /obj/item/clothing/under/shorts/grey // Солдатская форма
+	uniform_f = /obj/item/clothing/under/shorts/grey
+	shoes = /obj/item/clothing/shoes/boots // Говнодавы
+	head = /obj/item/clothing/head/helmet
+	l_pocket = /obj/item/weapon/storage/key_holder
+	belt = /obj/item/weapon/storage/belt/security
+	survival_box = FALSE
+
+	implants = list(/obj/item/weapon/implant/mind_protect/mindshield, /obj/item/weapon/implant/obedience)
+
+	back_style = BACKPACK_STYLE_SECURITY
 
 /datum/outfit/job/assistant/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
 	if(SSholiday.holidays[APRIL_FOOLS])

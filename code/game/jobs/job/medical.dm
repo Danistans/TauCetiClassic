@@ -1,5 +1,5 @@
 /datum/job/cmo
-	title = "Chief Medical Officer"
+	title = "Head Sister of Mercy"
 	flag = CMO
 	department_flag = MEDSCI
 	faction = "Station"
@@ -33,21 +33,17 @@
 	flags = JOB_FLAG_COMMAND|JOB_FLAG_HEAD_OF_STAFF|JOB_FLAG_MEDBAY|JOB_FLAG_BLUESHIELD_PROTEC
 
 /datum/job/doctor
-	title = "Medical Doctor"
+	title = "Sister of Mercy"
 	flag = DOCTOR
 	department_flag = MEDSCI
 	faction = "Station"
-	total_positions = 4
-	spawn_positions = 3
+	total_positions = 10
+	spawn_positions = 10
 	supervisors = "the chief medical officer"
 	selection_color = "#ffeef0"
 	idtype = /obj/item/weapon/card/id/med
 	access = list(access_medical, access_morgue, access_surgery, access_maint_tunnels, access_medbay_storage)
 	salary = 160
-	alt_titles = list(
-		"Surgeon" = /datum/outfit/job/surgeon,
-		"Nurse" = /datum/outfit/job/nurse
-		)
 	minimal_player_ingame_minutes = 960
 	outfit = /datum/outfit/job/doctor
 	skillsets = list(

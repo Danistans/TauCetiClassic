@@ -1,10 +1,10 @@
 #define JOB_MODIFICATION_MAP_NAME "Box Station"
 
-/datum/job/captain/New()
+/datum/job/assistant/New()
 	..()
 	MAP_JOB_CHECK
-	minimal_player_ingame_minutes = 0
-	skillsets = list("Captain" = /datum/skillset/captain)
+	access += list()
+	skillsets = list("Security Officer" = /datum/skillset/officer)
 
 /datum/job/hos/New()
 	..()
@@ -35,28 +35,35 @@
 /datum/job/cadet/New()
 	..()
 	MAP_JOB_CHECK
+	total_positions = 6
+	spawn_positions = 6
 	access += list()
 	skillsets = list("Security Officer" = /datum/skillset/officer)
 
 /datum/job/detective/New()
 	..()
 	MAP_JOB_CHECK
+	total_positions = 3
+	spawn_positions = 3
 	access += list()
 	skillsets = list("Security Officer" = /datum/skillset/officer)
 
 /datum/job/forensic/New()
 	..()
 	MAP_JOB_CHECK
+	total_positions = 2
+	spawn_positions = 2
 	access += list()
 	skillsets = list("Security Officer" = /datum/skillset/officer)
-
 
 
 MAP_REMOVE_JOB(clown)
 
 MAP_REMOVE_JOB(bartender)
 
-MAP_REMOVE_JOB(assistant)
+MAP_REMOVE_JOB(captain)
+
+MAP_REMOVE_JOB(cyborg)
 
 MAP_REMOVE_JOB(ai)
 
@@ -77,10 +84,6 @@ MAP_REMOVE_JOB(chaplain)
 MAP_REMOVE_JOB(chef)
 
 MAP_REMOVE_JOB(intern)
-
-MAP_REMOVE_JOB(doctor)
-
-MAP_REMOVE_JOB(cmo)
 
 MAP_REMOVE_JOB(technical_assistant)
 

@@ -2,16 +2,13 @@
 /datum/outfit/job/cmo
 	name = OUTFIT_JOB_NAME("Chief Medical Officer")
 
-	uniform = /obj/item/clothing/under/rank/chief_medical_officer
-	uniform_f = /obj/item/clothing/under/rank/chief_medical_officer/skirt
-	shoes = /obj/item/clothing/shoes/brown
-	suit = /obj/item/clothing/suit/storage/labcoat/cmo
+	uniform = /obj/item/clothing/under/shorts/blue // Форма сестричек
+	uniform_f = /obj/item/clothing/under/shorts/blue
+	shoes = /obj/item/clothing/shoes/white
+	head = /obj/item/clothing/head/surgery/blue
+	survival_box = FALSE
 
-	belt = /obj/item/device/pda/heads/cmo
-	l_ear = /obj/item/device/radio/headset/heads/cmo
-
-	l_hand = /obj/item/weapon/storage/firstaid/adv
-	suit_store = /obj/item/device/flashlight/pen
+	belt = /obj/item/weapon/storage/belt/medical
 
 	back_style = BACKPACK_STYLE_MEDICAL
 
@@ -24,16 +21,13 @@
 /datum/outfit/job/doctor
 	name = OUTFIT_JOB_NAME("Medical Doctor")
 
-	uniform = /obj/item/clothing/under/rank/medical
-	uniform_f =/obj/item/clothing/under/rank/medical/skirt
+	uniform = /obj/item/clothing/under/shorts/blue // Форма сестричек
+	uniform_f = /obj/item/clothing/under/shorts/blue
 	shoes = /obj/item/clothing/shoes/white
-	suit = /obj/item/clothing/suit/storage/labcoat
+	head = /obj/item/clothing/head/surgery/blue
+	survival_box = FALSE
 
-	belt = /obj/item/device/pda/medical
-	l_ear = /obj/item/device/radio/headset/headset_med
-
-	l_hand = /obj/item/weapon/storage/firstaid/adv
-	suit_store = /obj/item/device/flashlight/pen
+	belt = /obj/item/weapon/storage/belt/medical
 
 	back_style = BACKPACK_STYLE_MEDICAL
 

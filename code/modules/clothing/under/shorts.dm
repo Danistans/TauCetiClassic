@@ -6,6 +6,7 @@
 	body_parts_covered = LOWER_TORSO
 
 /obj/item/clothing/under/shorts/red
+	name = "russian officer uniform"
 	icon_state = "redshorts"
 
 /obj/item/clothing/under/shorts/green
@@ -18,4 +19,5 @@
 	icon_state = "blackshorts"
 
 /obj/item/clothing/under/shorts/grey
+	name = "pvt uniform"
 	icon_state = "greyshorts"

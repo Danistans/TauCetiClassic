@@ -35,10 +35,6 @@
 		icon_state = "conveyor-broken"
 		operating = 0
 		return
-	else if(!operable)
-		operating = 0
-	else if(stat & NOPOWER)
-		operating = 0
 	else
 		operating = 1
 	icon_state = "conveyor[operating * verted]"
@@ -95,8 +91,6 @@
 		return
 	if(!operable)
 		operating = 0
-	if(stat & NOPOWER)
-		operating = 0
 	icon_state = "conveyor[operating * verted]"
 
 	// machine process
@@ -106,7 +100,7 @@
 		return
 	if(!operating)
 		return
-	use_power(100)
+	use_power(0)
 
 	affecting = loc.contents - src		// moved items will be all in loc
 	sleep(1)	// slight delay to prevent infinite propagation due to map order

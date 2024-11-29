@@ -45,8 +45,8 @@
 	can_embed = 0
 
 /obj/item/weapon/katana
-	name = "katana"
-	desc = "Woefully underpowered in D20."
+	name = "Shashka"
+	desc = "Последний аргумент гордого русского офицера."
 	icon_state = "katana"
 	item_state = "katana"
 	hitsound = list('sound/weapons/bladeslice.ogg')

@@ -1,6 +1,6 @@
 /obj/item/weapon/melee/chainofcommand
-	name = "chain of command"
-	desc = "A tool used by great men to placate the frothing masses."
+	name = "Nagaika"
+	desc = "Для особо буйных солдатов и для необычных удовольствий."
 	icon_state = "chain"
 	item_state = "chain"
 	flags = CONDUCT
@@ -18,9 +18,6 @@
 
 /obj/item/weapon/melee/chainofcommand/afterattack(atom/target, mob/user, proximity, params)
 	user.SetNextMove(CLICK_CD_INTERACT)
-	if(!user.isloyal())
-		to_chat(user, "<span class='danger'[bicon(src)] SPECIAL FUNCTION DISABLED. LOYALTY IMPLANT NOT FOUND.</span>")
-		return
 	if(!ishuman(target))
 		return
 	var/mob/living/carbon/human/H = target

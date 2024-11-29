@@ -1,5 +1,5 @@
 /obj/item/clothing/head/helmet
-	name = "helmet"
+	name = "pvt cap"
 	desc = "Standard Security gear. Protects the head from impacts."
 	icon_state = "helmet"
 	flags = HEADCOVERSEYES
@@ -88,7 +88,7 @@
 	armor = list(melee = 30, bullet = 30, laser = 30,energy = 30, bomb = 0, bio = 100, rad = 100)
 
 /obj/item/clothing/head/helmet/warden
-	name = "warden's helmet"
+	name = "russian officer cap"
 	desc = "It's a special helmet issued to the Warden of a security force. Protects the head from impacts."
 	icon_state = "helmet_warden"
 

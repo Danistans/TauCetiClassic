@@ -163,7 +163,10 @@
 		/obj/item/taperoll/police,
 		/obj/item/weapon/gun/energy/taser/stunrevolver,
 		/obj/item/weapon/shield/riot/tele,
-		/obj/item/device/flashlight/seclite
+		/obj/item/device/flashlight/seclite,
+		/obj/item/weapon/grenade,
+		/obj/item/ammo_box/magazine,
+		/obj/item/ammo_box/speedloader
 		)
 
 /obj/item/weapon/storage/belt/security/German

@@ -225,6 +225,14 @@
 	dna_hash = 0
 	fingerprint_hash = 0
 
+/obj/item/weapon/card/id/key/assign(real_name)
+	if(!istext(real_name))
+		stack_trace("Expected text, got reference")
+		real_name = "[real_name]"
+
+	name = "[real_name]'s key[assignment ? " ([assignment])" : ""]"
+	registered_name = real_name
+
 /obj/item/weapon/card/id/key/captain
 	name = "master key"
 	desc = "Мастер-ключ от всех помещений поезда."
@@ -277,7 +285,7 @@
 			var/mob/living/carbon/human/H = M
 			if(istype(H.l_ear, /obj/item/clothing/ears/earmuffs) || istype(H.r_ear, /obj/item/clothing/ears/earmuffs))
 				continue
-		to_chat(M, "<font color='red' size='7'>[user] наказан всесильным духом Комаровых!</font>")
+		to_chat(M, "<font color='red' size='7'>[user] оказался недостоин прикоснуться к достоянию Комаровых.</font>")
 		M.SetSleeping(0)
 		M.AdjustStuttering(20)
 		M.ear_deaf += 30

@@ -7,7 +7,7 @@
 	spawn_positions = 2
 	supervisors = "the captain"
 	selection_color = "#ffdddd"
-	idtype = /obj/item/weapon/card/id/key/captain
+	idtype = /obj/item/weapon/card/id/key/officer
 	req_admin_notify = 1
 	is_head = TRUE
 	access = list(
@@ -39,7 +39,7 @@
 	spawn_positions = 1
 	supervisors = "the head of security"
 	selection_color = "#ffeeee"
-	idtype = /obj/item/weapon/card/id/sec
+	idtype = /obj/item/weapon/card/id/key/officer
 	access = list(access_security, access_sec_doors, access_brig, access_armory, access_maint_tunnels, access_hos)
 	salary = 190
 	minimal_player_age = 5
@@ -55,10 +55,6 @@
 	restricted_species = list(TAJARAN, DIONA, VOX, IPC, PLUVIAN)
 	flags = JOB_FLAG_SECURITY
 
-/datum/job/warden/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	if(HAS_ROUND_ASPECT(ROUND_ASPECT_ELITE_SECURITY))
-		to_chat(H, "<span class='notice'>Вместо обычной охраны на эту станцию решили прислать профессиональных оперативников. Вы являетесь одним из них. В отличии от стандартного офицера охраны, вы обладаете продвинутым снаряжением, отличной подготовкой, имплантом лояльности и встроенным устройством для уничтожения тела после смерти.</span>")
-
 /datum/job/detective
 	title = "Unter-officer"
 	flag = DETECTIVE
@@ -68,7 +64,7 @@
 	spawn_positions = 3
 	supervisors = "the head of security"
 	selection_color = "#ffeeee"
-	idtype = /obj/item/weapon/card/id/sec
+	idtype = /obj/item/weapon/card/id/key/officer
 	access = list(access_security, access_sec_doors, access_detective, access_maint_tunnels, access_hos)
 	salary = 180
 	minimal_player_age = 3
@@ -93,8 +89,8 @@
 	spawn_positions = 4
 	supervisors = "the head of security and warden"
 	selection_color = "#ffeeee"
-	idtype = /obj/item/weapon/card/id/sec
-	access = list(access_security, access_sec_doors, access_brig, access_maint_tunnels, access_hos)
+	idtype = /obj/item/weapon/card/id/key/officer
+	access = list(access_security, access_sec_doors, access_brig, access_maint_tunnels)
 	salary = 130
 	minimal_player_age = 3
 	minimal_player_ingame_minutes = 1560
@@ -109,11 +105,6 @@
 	restricted_species = list(DIONA, TAJARAN, VOX, IPC, PLUVIAN)
 	flags = JOB_FLAG_SECURITY
 
-/datum/job/officer/post_equip(mob/living/carbon/human/H, visualsOnly = FALSE)
-	if(HAS_ROUND_ASPECT(ROUND_ASPECT_ELITE_SECURITY))
-		to_chat(H, "<span class='notice'>Вместо обычной охраны на эту станцию решили прислать профессиональных оперативников. Вы являетесь одним из них. В отличии от стандартного офицера охраны, вы обладаете продвинутым снаряжением, отличной подготовкой, имплантом лояльности и встроенным устройством для уничтожения тела после смерти.</span>")
-		LAZYADD(skillsets, /datum/skillset/warden)
-
 /datum/job/forensic
 	title = "Sergeant major"
 	flag = FORENSIC
@@ -123,7 +114,7 @@
 	spawn_positions = 2
 	supervisors = "the head of security"
 	selection_color = "#ffeeee"
-	idtype = /obj/item/weapon/card/id/sec
+	idtype = /obj/item/weapon/card/id/key/officer
 	access = list(access_sec_doors, access_forensics_lockers, access_morgue, access_maint_tunnels, access_hos)
 	salary = 150
 	minimal_player_age = 3
@@ -148,7 +139,7 @@
 	spawn_positions = 6
 	supervisors = "the head of security"
 	selection_color = "#ffeeee"
-	idtype = /obj/item/weapon/card/id/sec
+	idtype = /obj/item/weapon/card/id/key/soldier
 	access = list(access_sec_doors, access_maint_tunnels)
 	salary = 50
 	minimal_player_age = 2
