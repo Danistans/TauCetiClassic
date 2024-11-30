@@ -1,5 +1,5 @@
 /datum/job/assistant
-	title = "Private"
+	title = "Рядовой"
 	flag = ASSISTANT
 	department_flag = CIVILIAN
 	faction = "Station"
