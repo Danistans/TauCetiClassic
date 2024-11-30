@@ -1,5 +1,5 @@
 /datum/job/cmo
-	title = "Head Sister of Mercy"
+	title = "Старшая Сестра Милосердия"
 	flag = CMO
 	department_flag = MEDSCI
 	faction = "Station"
@@ -33,7 +33,7 @@
 	flags = JOB_FLAG_COMMAND|JOB_FLAG_HEAD_OF_STAFF|JOB_FLAG_MEDBAY|JOB_FLAG_BLUESHIELD_PROTEC
 
 /datum/job/doctor
-	title = "Sister of Mercy"
+	title = "Сестра Милосердия"
 	flag = DOCTOR
 	department_flag = MEDSCI
 	faction = "Station"
