@@ -7,6 +7,8 @@
 	shoes = /obj/item/clothing/shoes/white
 	head = /obj/item/clothing/head/surgery/blue
 	survival_box = FALSE
+	l_ear = FALSE
+	r_ear = FALSE
 
 	belt = /obj/item/weapon/storage/belt/medical
 
@@ -26,6 +28,8 @@
 	shoes = /obj/item/clothing/shoes/white
 	head = /obj/item/clothing/head/surgery/blue
 	survival_box = FALSE
+	l_ear = FALSE
+	r_ear = FALSE
 
 	belt = /obj/item/weapon/storage/belt/medical
 
