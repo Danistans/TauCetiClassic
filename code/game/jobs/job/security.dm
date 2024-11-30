@@ -1,5 +1,5 @@
 /datum/job/hos
-	title = "Colonel"
+	title = "Полковник"
 	flag = HOS
 	department_flag = ENGSEC
 	faction = "Station"
@@ -31,7 +31,7 @@
 	flags = JOB_FLAG_SECURITY|JOB_FLAG_COMMAND|JOB_FLAG_HEAD_OF_STAFF|JOB_FLAG_BLUESHIELD_PROTEC
 
 /datum/job/warden
-	title = "Lieutenant"
+	title = "Поручик"
 	flag = WARDEN
 	department_flag = ENGSEC
 	faction = "Station"
@@ -56,7 +56,7 @@
 	flags = JOB_FLAG_SECURITY
 
 /datum/job/detective
-	title = "Unter-officer"
+	title = "Унтер-офицер"
 	flag = DETECTIVE
 	department_flag = ENGSEC
 	faction = "Station"
@@ -81,7 +81,7 @@
 	flags = JOB_FLAG_SECURITY
 
 /datum/job/officer
-	title = "Security Officer"
+	title = "Офицер охранки"
 	flag = OFFICER
 	department_flag = ENGSEC
 	faction = "Station"
@@ -106,7 +106,7 @@
 	flags = JOB_FLAG_SECURITY
 
 /datum/job/forensic
-	title = "Sergeant major"
+	title = "Фельдфебель"
 	flag = FORENSIC
 	department_flag = ENGSEC
 	faction = "Station"
@@ -131,7 +131,7 @@
 	flags = JOB_FLAG_SECURITY
 
 /datum/job/cadet
-	title = "Corporal"
+	title = "Ефрейтор"
 	flag = CADET
 	department_flag = ENGSEC
 	faction = "Station"
