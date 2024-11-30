@@ -13,7 +13,7 @@
 	l_ear = FALSE
 	r_ear = FALSE
 
-	implants = list(/obj/item/weapon/implant/mind_protect/loyalty)
+	implants = list(/obj/item/weapon/implant/mind_protect/mindshield, /obj/item/weapon/implant/obedience)
 
 	back_style = BACKPACK_STYLE_SECURITY
 
