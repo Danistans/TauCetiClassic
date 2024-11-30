@@ -10,6 +10,8 @@
 	belt = /obj/item/weapon/katana // Шашка
 	l_pocket = /obj/item/weapon/storage/key_holder
 	survival_box = FALSE
+	l_ear = FALSE
+	r_ear = FALSE
 
 	implants = list(/obj/item/weapon/implant/mind_protect/loyalty)
 
@@ -43,6 +45,8 @@
 	shoes = /obj/item/clothing/shoes/boots // Говнодавы
 	head = /obj/item/clothing/head/helmet/warden
 	survival_box = FALSE
+	l_ear = FALSE
+	r_ear = FALSE
 
 	suit_store = /obj/item/weapon/gun/energy/gun
 	belt = /obj/item/weapon/katana // Шашка
@@ -63,6 +67,8 @@
 	belt = /obj/item/weapon/katana // Шашка
 	l_pocket = /obj/item/weapon/storage/key_holder
 	survival_box = FALSE
+	l_ear = FALSE
+	r_ear = FALSE
 
 	implants = list(/obj/item/weapon/implant/mind_protect/mindshield, /obj/item/weapon/implant/obedience)
 
@@ -77,6 +83,8 @@
 	head = /obj/item/clothing/head/helmet/warden
 	l_pocket = /obj/item/weapon/storage/key_holder
 	survival_box = FALSE
+	l_ear = FALSE
+	r_ear = FALSE
 
 	suit_store = /obj/item/weapon/gun/energy/gun
 	belt = /obj/item/weapon/katana // Шашка
@@ -93,6 +101,8 @@
 	belt = /obj/item/weapon/katana // Шашка
 	l_pocket = /obj/item/weapon/storage/key_holder
 	survival_box = FALSE
+	l_ear = FALSE
+	r_ear = FALSE
 
 	implants = list(/obj/item/weapon/implant/mind_protect/mindshield, /obj/item/weapon/implant/obedience)
 
@@ -106,6 +116,8 @@
 	shoes = /obj/item/clothing/shoes/boots // Говнодавы
 	head = /obj/item/clothing/head/helmet/warden
 	survival_box = FALSE
+	l_ear = FALSE
+	r_ear = FALSE
 
 	suit_store = /obj/item/weapon/gun/energy/gun
 	belt = /obj/item/weapon/katana // Шашка
@@ -127,6 +139,8 @@
 	belt = /obj/item/weapon/katana // Шашка
 	l_pocket = /obj/item/weapon/storage/key_holder
 	survival_box = FALSE
+	l_ear = FALSE
+	r_ear = FALSE
 
 	implants = list(/obj/item/weapon/implant/mind_protect/mindshield, /obj/item/weapon/implant/obedience)
 
@@ -142,6 +156,8 @@
 	head = /obj/item/clothing/head/helmet/warden
 	l_pocket = /obj/item/weapon/storage/key_holder
 	survival_box = FALSE
+	l_ear = FALSE
+	r_ear = FALSE
 
 	suit_store = /obj/item/weapon/gun/energy/gun
 	belt = /obj/item/weapon/katana // Шашка
@@ -159,6 +175,8 @@
 	l_pocket = /obj/item/weapon/storage/key_holder
 	belt = /obj/item/weapon/storage/belt/security
 	survival_box = FALSE
+	l_ear = FALSE
+	r_ear = FALSE
 
 	implants = list(/obj/item/weapon/implant/mind_protect/mindshield, /obj/item/weapon/implant/obedience)
 
