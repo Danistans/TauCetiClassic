@@ -9,7 +9,6 @@
 	l_pocket = /obj/item/weapon/storage/key_holder
 	belt = /obj/item/weapon/storage/belt/security
 	survival_box = FALSE
-	l_ear = null
 
 	implants = list(/obj/item/weapon/implant/mind_protect/mindshield, /obj/item/weapon/implant/obedience)
 
