@@ -5,9 +5,9 @@
 	shoes = /obj/item/clothing/shoes/black
 
 	l_ear = null
-	belt = /obj/item/device/pda
+	belt = null
 
 	back = PREFERENCE_BACKPACK
 	back_style = BACKPACK_STYLE_COMMON
 
-	survival_box = TRUE
+	survival_box = FALSE

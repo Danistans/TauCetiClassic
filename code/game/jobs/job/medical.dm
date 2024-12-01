@@ -20,7 +20,7 @@
 	minimal_player_age = 10
 	minimal_player_ingame_minutes = 2400
 	outfit = /datum/outfit/job/cmo
-	skillsets = list("Chief Medical Officer" = /datum/skillset/cmo)
+	skillsets = list("Старшая Сестра Милосердия" = /datum/skillset/cmo)
 	/*
 		HEY YOU!
 		ANY TIME YOU TOUCH THIS, PLEASE CONSIDER GOING TO preferences_savefile.dm
@@ -46,11 +46,7 @@
 	salary = 160
 	minimal_player_ingame_minutes = 960
 	outfit = /datum/outfit/job/doctor
-	skillsets = list(
-		"Medical Doctor" = /datum/skillset/doctor,
-		"Surgeon" = /datum/skillset/doctor/surgeon,
-		"Nurse" = /datum/skillset/doctor/nurse
-		)
+	skillsets = list("Сестра Милосердия" = /datum/skillset/doctor)
 	/*
 		HEY YOU!
 		ANY TIME YOU TOUCH THIS, PLEASE CONSIDER GOING TO preferences_savefile.dm

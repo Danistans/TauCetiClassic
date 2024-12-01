@@ -11,7 +11,7 @@
 	salary = 0
 	idtype = /obj/item/weapon/card/id/key/soldier
 	outfit = /datum/outfit/job/assistant
-	skillsets = list("Security Officer" = /datum/skillset/officer)
+	skillsets = list("Рядовой" = /datum/skillset/officer)
 	flags = JOB_FLAG_SECURITY
 
 /datum/job/assistant/get_access()

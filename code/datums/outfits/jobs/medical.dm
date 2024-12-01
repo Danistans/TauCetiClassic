@@ -7,17 +7,13 @@
 	shoes = /obj/item/clothing/shoes/white
 	head = /obj/item/clothing/head/surgery/blue
 	survival_box = FALSE
-	l_ear = FALSE
-	r_ear = FALSE
-
 	belt = /obj/item/weapon/storage/belt/medical
 
-	back_style = BACKPACK_STYLE_MEDICAL
+	back_style = null
 
 /datum/outfit/job/cmo/pre_equip(mob/living/carbon/human/H)
 	if(HAS_ROUND_ASPECT(ROUND_ASPECT_HF_AGENT))
 		implants += /obj/item/weapon/implant/obedience
-
 
 // DOCTOR OUTFIT
 /datum/outfit/job/doctor
@@ -28,9 +24,6 @@
 	shoes = /obj/item/clothing/shoes/white
 	head = /obj/item/clothing/head/surgery/blue
 	survival_box = FALSE
-	l_ear = FALSE
-	r_ear = FALSE
-
 	belt = /obj/item/weapon/storage/belt/medical
 
 	back_style = BACKPACK_STYLE_MEDICAL

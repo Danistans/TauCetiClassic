@@ -1096,6 +1096,7 @@
 /obj/item/poezd
 	name = "item"
 	icon = 'icons/obj/poezd.dmi'
+	mouse_opacity = 0
 
 /obj/item/poezd/atom_init()
 	var/pizda = pick(1, 2, 3, 4, 5, 6, 7, 8, 9, 10,

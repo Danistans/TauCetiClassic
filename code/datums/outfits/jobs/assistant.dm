@@ -8,6 +8,7 @@
 	head = /obj/item/clothing/head/helmet
 	l_pocket = /obj/item/weapon/storage/key_holder
 	belt = /obj/item/weapon/storage/belt/security
+
 	survival_box = FALSE
 
 	implants = list(/obj/item/weapon/implant/mind_protect/mindshield, /obj/item/weapon/implant/obedience)
