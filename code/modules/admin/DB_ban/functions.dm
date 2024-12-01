@@ -107,7 +107,7 @@
 		CRASH("Should have any of bantype or job!")
 
 	var/bantype_sql
-	if(bantype) 
+	if(bantype)
 		if(!(bantype in global.valid_ban_types))
 			CRASH("Unknown ban type [bantype]!")
 		bantype_sql = "bantype = '[bantype]'"
@@ -276,9 +276,10 @@
 	if(!(check_rights(R_LOG) && check_rights(R_BAN)))
 		return
 
-	if(!establish_db_connection("erro_ban"))
+/*	if(!establish_db_connection("erro_ban"))
 		to_chat(usr, "<span class='warning'>Failed to establish database connection</span>")
 		return
+*/
 
 	var/output = "<div align='center'><table width='90%'><tr>"
 
@@ -296,6 +297,8 @@
 	output += "<option value='[BANTYPE_TEMP]'>TEMPBAN</option>"
 	output += "<option value='[BANTYPE_JOB_PERMA]'>JOB PERMABAN</option>"
 	output += "<option value='[BANTYPE_JOB_TEMP]'>JOB TEMPBAN</option>"
+	output += "<option value='[BANTYPE_CHAT_PERMA]'>CHAT PERMABAN</option>"
+	output += "<option value='[BANTYPE_CHAT_TEMP]'>CHAT TEMPBAN</option>"
 	output += "</select></td>"
 	output += "<td width='50%' align='right'><b>Ckey:</b> <input type='text' name='dbbanaddckey'></td></tr>"
 	output += "<tr><td width='50%' align='right'><b>IP:</b> <input type='text' name='dbbanaddip'></td>"
@@ -330,6 +333,8 @@
 	output += "<option value='[BANTYPE_TEMP]'>TEMPBAN</option>"
 	output += "<option value='[BANTYPE_JOB_PERMA]'>JOB PERMABAN</option>"
 	output += "<option value='[BANTYPE_JOB_TEMP]'>JOB TEMPBAN</option>"
+	output += "<option value='[BANTYPE_CHAT_PERMA]'>CHAT PERMABAN</option>"
+	output += "<option value='[BANTYPE_CHAT_TEMP]'>CHAT TEMPBAN</option>"
 	output += "</select></td></tr></table>"
 	output += "<br><input type='submit' value='search'><br>"
 	output += "<input type='checkbox' value='[match]' name='dbmatch' [match? "checked=\"1\"" : null]> Match(min. 3 characters to search by key or ip, and 7 to search by cid)<br>"

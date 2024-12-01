@@ -172,10 +172,11 @@
 			to_chat(usr, "<span class='warning'>[role] for [target_ckey] already exists in whitelist.</span>")
 		return FALSE
 
-	if(!establish_db_connection("erro_whitelist"))
+/*	if(!establish_db_connection("erro_whitelist"))
 		if(!added_by_bot)
 			to_chat(usr, "<span class='warning'>Failed to establish database connection.</span>")
 		return FALSE
+*/
 
 	var/DBQuery/insert_query = dbcon.NewQuery("INSERT INTO `erro_whitelist` (`ckey`, `role`, `ban`, `reason`, `addby`, `addtm`, `editby`, `edittm`) VALUES ('[target_ckey]', '[sanitize_sql(role)]', '0', '[reason]', '[adm_ckey]', NOW(), '[adm_ckey]', NOW());")
 	if(!insert_query.Execute())
@@ -237,10 +238,10 @@
 		to_chat(usr, "<span class='warning'>[role] for [target_ckey] does not exist in whitelist.</span>")
 		return
 
-	if(!establish_db_connection("erro_whitelist"))
+/*	if(!establish_db_connection("erro_whitelist"))
 		to_chat(usr, "<span class='warning'>Failed to establish database connection.</span>")
 		return
-
+*/
 	var/sql_update
 	if(ban_edit)
 		sql_update = "UPDATE `erro_whitelist` SET ban = '[sanitize_sql(ban)]', reason = '[reason]', editby = '[adm_ckey]', edittm = Now() WHERE ckey = '[target_ckey]' AND role = '[sanitize_sql(role)]'"

@@ -91,7 +91,7 @@
 
 		admin_datums -= adm_ckey
 		D.disassociate()
-		
+
 		message_admins("[key_name_admin(usr)] removed [adm_ckey] from the admins list")
 		log_admin("[key_name(usr)] removed [adm_ckey] from the admins list")
 
@@ -208,10 +208,11 @@ var elements = document.getElementsByName('rights');
 		message_admins("[key_name_admin(usr)] removed[removed_rights] permissions of [adm_ckey]")
 		log_admin("[key_name(usr)] removed[removed_rights] permission of [adm_ckey]")
 
-	if(!establish_db_connection("erro_admin", "erro_admin_log"))
+/*	if(!establish_db_connection("erro_admin", "erro_admin_log"))
 		to_chat(usr, "<span class='alert'>Failed to establish database connection</span>")
 		return
 	adm_ckey = ckey(adm_ckey)
+*/
 	if(!istext(adm_ckey) || !isnum(new_rights))
 		return
 	var/DBQuery/select_query = dbcon.NewQuery("SELECT id FROM erro_admin WHERE ckey = '[adm_ckey]'")
@@ -252,9 +253,10 @@ var elements = document.getElementsByName('rights');
 	message_admins("[key_name_admin(usr)] added [ment_ckey] to the mentors list")
 	log_admin("[key_name(usr)] added [ment_ckey] to the mentors list")
 
-	if(!establish_db_connection("erro_mentor", "erro_admin_log"))
+/*	if(!establish_db_connection("erro_mentor", "erro_admin_log"))
 		to_chat(usr, "<span class='alert'>Failed to establish database connection</span>")
 		return
+*/
 	ment_ckey = ckey(ment_ckey)
 	var/DBQuery/insert_query = dbcon.NewQuery("INSERT INTO `erro_mentor` (`id`, `ckey`) VALUES (null, '[ment_ckey]');")
 	insert_query.Execute()
@@ -277,9 +279,10 @@ var elements = document.getElementsByName('rights');
 		message_admins("[key_name_admin(usr)] removed [ment_ckey] from the mentors list")
 		log_admin("[key_name(usr)] removed [ment_ckey] from the mentors list")
 
-		if(!establish_db_connection("erro_mentor", "erro_admin_log"))
+/*		if(!establish_db_connection("erro_mentor", "erro_admin_log"))
 			to_chat(usr, "<span class='alert'>Failed to establish database connection</span>")
 			return
+*/
 		ment_ckey = ckey(ment_ckey)
 		var/DBQuery/remove_query = dbcon.NewQuery("DELETE FROM `erro_mentor` WHERE `ckey` = '[ment_ckey]';")
 		remove_query.Execute()
@@ -296,9 +299,11 @@ var elements = document.getElementsByName('rights');
 	if(!usr.client.holder || !(usr.client.holder.rights & R_PERMISSIONS))
 		to_chat(usr, "<span class='alert'>You do not have permission to do this!</span>")
 		return
+/*
 	if(!establish_db_connection("erro_admin", "erro_admin_log"))
 		to_chat(usr, "<span class='alert'>Failed to establish database connection</span>")
 		return
+*/
 	if(!adm_ckey || !new_rank)
 		return
 	adm_ckey = ckey(adm_ckey)
