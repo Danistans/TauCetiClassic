@@ -230,7 +230,7 @@
 		stack_trace("Expected text, got reference")
 		real_name = "[real_name]"
 
-	name = "[real_name]'s key[assignment ? " ([assignment])" : ""]"
+	name = "[real_name]'s key"
 	registered_name = real_name
 
 /obj/item/weapon/card/id/key/captain

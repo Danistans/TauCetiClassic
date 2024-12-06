@@ -10,6 +10,7 @@
 	var/obj/item/clothing/has_suit = null // the suit the accessory may be attached to
 	var/image/inv_overlay = null                // overlay used when attached to clothing.
 	var/layer_priority = 0                      // so things such as medals won't be drawn under webbings or holsters on mob, still problem with inside inventory.
+	var/obj/item/wear_key = null				// Потому что иди нахуй?
 
 /obj/item/clothing/accessory/atom_init()
 	. = ..()
@@ -169,6 +170,49 @@
 	icon_state = "metal_cross"
 	slot_flags = SLOT_FLAGS_NECK | SLOT_FLAGS_TIE
 
+// Погоны. Я не знаю как прикрутить get_assignmnent к ним, поэтому просто сделаю пока разные варианты (07.12.2024)
+/obj/item/clothing/accessory/shoulder_straps
+	name = "Погоны"
+	desc = "Их носят с честью и сдирают с позором."
+	icon_state = "metal_cross" 	// нужны спрайты погон
+	slot_flags = SLOT_FLAGS_TIE
+	inv_overlay = null 			// оверлей погонов ёпта
+
+/obj/item/clothing/accessory/shoulder_straps/attack_self(mob/user)
+	to_chat(user, "<span class='notice'>Материал этих погон пропитан воинской славой и преданностью Отечеству. Один лишь взгляд на них вызывает трепет в вашей груди.")
+
+/obj/item/clothing/accessory/shoulder_straps/assistant 	// названия соответствуют названию в коде, а не в игре!
+	name = "Погоны рядового"
+	icon_state = "Ryadovoy"
+
+/obj/item/clothing/accessory/shoulder_straps/hos
+	name = "Погоны полковника"
+	icon_state = "POLKOVNOK"
+
+/obj/item/clothing/accessory/shoulder_straps/warden
+	name = "Погоны поручика"
+	icon_state = "PORUCHIK"
+
+/obj/item/clothing/accessory/shoulder_straps/detective
+	name = "Погоны унтер-офицера"
+	icon_state = "UNTEROFFICER"
+
+/obj/item/clothing/accessory/shoulder_straps/officer
+	name = "Погоны офицера охранки"
+	icon_state = "OKHRANKA"
+
+/obj/item/clothing/accessory/shoulder_straps/officer/attack_self(mob/user)
+	. = ..()
+	to_chat(user, "<span class='notice'>Материал этих погон пропитан воинской славой и преданностью Отечеству. Один лишь взгляд на них вызывает трепет в вашей груди... Я кстати не знаю, кто такой этот ваш офицер охранки. Спрашивайте у Ольдема. С любовью, Комарова.")
+
+/obj/item/clothing/accessory/shoulder_straps/forensic
+	name = "Погоны фельдфебеля"
+	icon_state = "FEILDFIBEL"
+
+/obj/item/clothing/accessory/shoulder_straps/cadet
+	name = "Погоны ефрейтора"
+	icon_state = "EFREYTOR"
+
 //Medals
 /datum/medal
 	// string, anything
@@ -249,6 +293,21 @@
 /obj/item/clothing/accessory/medal/conduct
 	name = "distinguished conduct medal"
 	desc = "A bronze medal awarded for distinguished conduct. Whilst a great honor, this is the most basic award given by Nanotrasen. It is often awarded by a captain to a member of his crew."
+
+/obj/item/clothing/accessory/medal/saint_georgy
+	name = "Орден Святого Георгия"
+	desc = "Орден Святого Георгия"
+	icon_state = "orden_sv_georgia"
+
+/obj/item/clothing/accessory/medal/for_honor
+	name = "Медаль за храбрость"
+	desc = "Медаль за храбрость"
+	icon_state = "za_hrabrost"
+
+/obj/item/clothing/accessory/medal/georgievskiy_krest
+	name = "Георгиевский крест"
+	desc = "Крест Георгия?"
+	icon_state = "georgievskiy_khrest"
 
 /obj/item/clothing/accessory/medal/bronze_heart
 	name = "bronze heart medal"

@@ -7,6 +7,7 @@
 	shoes = /obj/item/clothing/shoes/boots // Говнодавы
 	head = /obj/item/clothing/head/helmet
 	l_pocket = /obj/item/weapon/storage/key_holder
+	r_pocket = /obj/item/clothing/accessory/shoulder_straps/assistant
 	belt = /obj/item/weapon/storage/belt/security
 
 	survival_box = FALSE

@@ -9,6 +9,7 @@
 
 	belt = /obj/item/weapon/katana // Шашка
 	l_pocket = /obj/item/weapon/storage/key_holder
+	r_pocket = /obj/item/clothing/accessory/shoulder_straps/hos
 	survival_box = FALSE
 
 	implants = list(/obj/item/weapon/implant/mind_protect/mindshield, /obj/item/weapon/implant/obedience)
@@ -27,6 +28,7 @@
 	suit_store = /obj/item/weapon/gun/energy/gun
 	belt = /obj/item/weapon/katana // Шашка
 	l_pocket = /obj/item/weapon/storage/key_holder
+	r_pocket = /obj/item/clothing/accessory/shoulder_straps/warden
 	survival_box = FALSE
 
 	backpack_contents = null
@@ -47,6 +49,7 @@
 	suit_store = /obj/item/weapon/gun/energy/gun
 	belt = /obj/item/weapon/katana // Шашка
 	l_pocket = /obj/item/weapon/storage/key_holder
+	r_pocket = /obj/item/clothing/accessory/shoulder_straps/detective
 
 	implants = list(/obj/item/weapon/implant/mind_protect/mindshield, /obj/item/weapon/implant/obedience)
 
@@ -62,6 +65,7 @@
 	suit_store = /obj/item/weapon/gun/energy/gun
 	belt = /obj/item/weapon/katana // Шашка
 	l_pocket = /obj/item/weapon/storage/key_holder
+	r_pocket = /obj/item/clothing/accessory/shoulder_straps/officer
 	survival_box = FALSE
 
 	implants = list(/obj/item/weapon/implant/mind_protect/mindshield, /obj/item/weapon/implant/obedience)
@@ -76,6 +80,7 @@
 	shoes = /obj/item/clothing/shoes/boots // Говнодавы
 	head = /obj/item/clothing/head/helmet/warden
 	l_pocket = /obj/item/weapon/storage/key_holder
+	r_pocket = /obj/item/clothing/accessory/shoulder_straps/officer
 	survival_box = FALSE
 
 	suit_store = /obj/item/weapon/gun/energy/gun
@@ -92,6 +97,7 @@
 	suit_store = /obj/item/weapon/gun/energy/gun
 	belt = /obj/item/weapon/katana // Шашка
 	l_pocket = /obj/item/weapon/storage/key_holder
+	r_pocket = /obj/item/clothing/accessory/shoulder_straps/forensic
 	survival_box = FALSE
 
 	implants = list(/obj/item/weapon/implant/mind_protect/mindshield, /obj/item/weapon/implant/obedience)
@@ -109,6 +115,7 @@
 
 	belt = /obj/item/weapon/katana // Шашка
 	l_pocket = /obj/item/weapon/storage/key_holder
+	r_pocket = /obj/item/clothing/accessory/shoulder_straps/detective
 
 	implants = list(/obj/item/weapon/implant/mind_protect/mindshield, /obj/item/weapon/implant/obedience)
 
@@ -124,6 +131,7 @@
 
 	belt = /obj/item/weapon/katana // Шашка
 	l_pocket = /obj/item/weapon/storage/key_holder
+	r_pocket = /obj/item/clothing/accessory/shoulder_straps/warden
 	survival_box = FALSE
 
 	implants = list(/obj/item/weapon/implant/mind_protect/mindshield, /obj/item/weapon/implant/obedience)
@@ -139,6 +147,7 @@
 	shoes = /obj/item/clothing/shoes/boots // Говнодавы
 	head = /obj/item/clothing/head/helmet/warden
 	l_pocket = /obj/item/weapon/storage/key_holder
+	r_pocket = /obj/item/clothing/accessory/shoulder_straps/forensic
 	survival_box = FALSE
 
 	belt = /obj/item/weapon/katana // Шашка
@@ -154,6 +163,7 @@
 	shoes = /obj/item/clothing/shoes/boots // Говнодавы
 	head = /obj/item/clothing/head/helmet
 	l_pocket = /obj/item/weapon/storage/key_holder
+	r_pocket = /obj/item/clothing/accessory/shoulder_straps/cadet
 	belt = /obj/item/weapon/storage/belt/security
 	survival_box = FALSE
 
