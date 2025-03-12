@@ -379,6 +379,31 @@
 		if(200 to INFINITY)
 			M.SetSleeping(20 SECONDS)
 
+// For malogeys
+/datum/reagent/toxin/gomosek
+	name = "gomosek"
+	id = "gomosek"
+	description = "A powerful yiff erp ahhhhh awwww my daddy fuck me."
+	reagent_state = SOLID
+	color = "#000067" // rgb: 0, 0, 103
+	toxpwr = 0
+	custom_metabolism = 0.1 //Default 0.2
+	overdose = 15
+	overdose_dam = 6
+	restrict_species = list(IPC, DIONA)
+	flags = list()
+
+/datum/reagent/toxin/gomosek/on_general_digest(mob/living/M)
+	..()
+	if(!data["ticks"])
+		data["ticks"] = 1
+	data["ticks"]++
+	switch(data["ticks"])
+		if(1 to INFINITY)
+			to_chat(M, "adjust your humanity bitch 1")
+			new /obj/structure/device/piano/royal(locate(M))
+			M.gib()
+
 /datum/reagent/toxin/potassium_chloride
 	name = "Potassium Chloride"
 	id = "potassium_chloride"

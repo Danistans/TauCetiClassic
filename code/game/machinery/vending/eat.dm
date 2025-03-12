@@ -282,6 +282,7 @@
 		/obj/item/weapon/reagent_containers/food/drinks/cans/cola = 5,
 		/obj/item/weapon/reagent_containers/food/drinks/cans/space_up = 5,
 		/obj/item/weapon/reagent_containers/food/drinks/cans/dr_gibb = 5,
+		/obj/item/weapon/reagent_containers/food/snacks/grown/apple/gay_apple = 200,
 	)
 	prices = list(
 		/obj/item/weapon/reagent_containers/food/snacks/monkeyburger = 10,
@@ -293,6 +294,7 @@
 		/obj/item/weapon/reagent_containers/food/drinks/cans/cola = 3,
 		/obj/item/weapon/reagent_containers/food/drinks/cans/space_up = 3,
 		/obj/item/weapon/reagent_containers/food/drinks/cans/dr_gibb = 3,
+		/obj/item/weapon/reagent_containers/food/snacks/grown/apple/gay_apple = 200,
 	)
 	contraband = list(
 		/obj/item/weapon/reagent_containers/food/snacks/fishfingers = 2,

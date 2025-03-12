@@ -510,6 +510,21 @@
 	reagents.add_reagent("nutriment", 1+round((potency / 10), 1))
 	bitesize = reagents.maximum_volume // Always eat the apple in one
 
+/obj/item/weapon/reagent_containers/food/snacks/grown/apple/gay_apple
+	seed_type = /obj/item/seeds/harebell
+	name = "gay apple"
+	cases = list("гейское яблоко", "гейского яблока", "гейскому яблоку", "гейское яблоко", "гейским яблоком", "гейском яблоке")
+	desc = "Ешь, пей, жуй, соси небритый хуй."
+	icon_state = "apple"
+	potency = 15
+	filling_color = "#dfe88b"
+
+/obj/item/weapon/reagent_containers/food/snacks/grown/apple/gay_apple/atom_init()
+	. = ..()
+	reagents.maximum_volume = 20
+	reagents.add_reagent("gomosek", 1+round((potency / 10), 1))
+	bitesize = reagents.maximum_volume // Always eat the apple in one
+
 /obj/item/weapon/reagent_containers/food/snacks/grown/apple/poisoned
 	seed_type = /obj/item/seeds/poisonedappleseed
 	name = "apple"
